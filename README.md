@@ -1,2 +1,14 @@
-# demo-cdk
-Cliente va a mandar un mensaje usando API-Gateway POST/GET a diferentes funciones de Lambda y estas van a guardar un nombre en una tabla de dynamodb y cuando haya un GET va a decir si el nombre esta guardado en la tabla o no.
+# Welcome to your CDK TypeScript project
+
+This is a blank project for CDK development with TypeScript.
+
+The `cdk.json` file tells the CDK Toolkit how to execute your app.
+
+## Useful commands
+
+* `npm run build`   compile typescript to js
+* `npm run watch`   watch for changes and compile
+* `npm run test`    perform the jest unit tests
+* `cdk deploy`      deploy this stack to your default AWS account/region
+* `cdk diff`        compare deployed stack with current state
+* `cdk synth`       emits the synthesized CloudFormation template

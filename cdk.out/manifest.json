@@ -1,0 +1,142 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkFirstAppStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkFirstAppStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkFirstAppStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkFirstAppStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d2dea94f4a5891a65c2c1c26cf2751c50402084894d54206b7c1ec80afa4d6ac.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkFirstAppStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkFirstAppStack.assets"
+      ],
+      "metadata": {
+        "/CdkFirstAppStack/TablaSaludos/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TablaSaludos5C5E7A60"
+          }
+        ],
+        "/CdkFirstAppStack/GuardarSaludoFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GuardarSaludoFunctionServiceRole90B34A14"
+          }
+        ],
+        "/CdkFirstAppStack/GuardarSaludoFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GuardarSaludoFunctionServiceRoleDefaultPolicy0A3B0C5E"
+          }
+        ],
+        "/CdkFirstAppStack/GuardarSaludoFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GuardarSaludoFunction697EB264"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApi09FDA3C9"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApiDeploymentB54C201B3d96fa133f3917f7b723e054f2bb4742"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApiDeploymentStageprodEF0A0D49"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApiEndpoint4A6E6A3D"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/Default/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApihello2E32AF66"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/Default/hello/POST/ApiPermission.CdkFirstAppStacksaludoApi0499CD10.POST..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApihelloPOSTApiPermissionCdkFirstAppStacksaludoApi0499CD10POSThelloEFE53D03"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/Default/hello/POST/ApiPermission.Test.CdkFirstAppStacksaludoApi0499CD10.POST..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApihelloPOSTApiPermissionTestCdkFirstAppStacksaludoApi0499CD10POSThello83EB2E38"
+          }
+        ],
+        "/CdkFirstAppStack/saludoApi/Default/hello/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "saludoApihelloPOSTD51AC8A9"
+          }
+        ],
+        "/CdkFirstAppStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CdkFirstAppStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CdkFirstAppStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkFirstAppStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkFirstAppStack"
+    }
+  }
+}
